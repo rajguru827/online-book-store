@@ -1,0 +1,13 @@
+
+<div class="row">
+  <div class="col-md-8">
+    <ul>
+      <li *ngFor="let book of books">
+        <a href="javascript:;" (click)="selectBook(book)">{{book.title}}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-4">
+    <app-book-details [book]="selectedBook" *ngIf="selectedBook"></app-book-details>
+  </div>
+</div>
